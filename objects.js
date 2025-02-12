@@ -60,3 +60,48 @@ console.log(Superhero.greeting) // This will give the reference of function not 
 
 // it has to executed like a function will get printed cuz it is freezed
 console.log(Superhero.greeting())
+
+console.log("-------------------------------------------------------------------------");
+// Singleton
+const legoPlayer = new Object()
+// const legoPlayer = {} Both are the same
+console.log(legoPlayer) // Will return empty object
+
+const LegoCollector = {
+    name: "Thor",
+    fullname: {
+        asgardname :{
+            firstname: "Thor",
+            power: "God of Thunder"
+        }
+    }
+}
+
+// Access the value
+
+console.log(LegoCollector.fullname?.asgardname.power)//Help to if the user is not sure about if the response sent by the API is there or not else too many conditional has to be used
+
+
+console.log("-------------------------------------------------------------------------");
+// Combinging objects
+const obj1 = {1:"a", 2:"b"}
+const obj2 = {3:"a", 4:"b"}
+// console.log(obj1, obj2) // prints 2 seperate objects
+
+const obj3 = {obj1, obj2}
+console.log(obj3) // nested objects didn't add
+
+const obj4 = Object.assign({}, obj1, obj2) // {} is used as a source -  else onj1 is used as a source and all the other objects get added in that
+console.log(obj4) // Add both the objects
+
+const obj5 = {...obj1, ...obj2} // spread operator usage is easy and preferred
+console.log(obj5) // Add both the objects
+
+console.log("-------------------------------------------------------------------------");
+console.log(Object.keys(Superhero)) // This will return the key in the form of array that can be used by looping through them
+console.log(Object.values(Superhero))
+console.log(Object.entries(Superhero)) // This will return the key value in the form of array
+console.log(Superhero.hasOwnProperty('name')) // if want to check the property - boolean result
+
+//More about the objects
+// Goto console in browser in prototype
